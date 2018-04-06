@@ -5,7 +5,7 @@ const morgan = require('morgan');
 
 app.use(morgan('dev'));
 
-app.use(express.static('./client/public'));
+app.use(express.static('./client/dist'));
 
 app.use(router);
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-import Component from './components/mycomponent'
+import Component from './Component'
 
 class App extends React.Component {
   constructor(props){
@@ -20,4 +19,4 @@ class App extends React.Component {
   }
 }
 
-ReactDom.render(<App/>, document.getElementById('app'));
+export default App;
