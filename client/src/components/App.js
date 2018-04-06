@@ -13,7 +13,8 @@ class App extends React.Component {
 
   render () {
     return (<div> 
-              Start Kit App!
+              <h1>MERN Starter Kit</h1>
+              This is your App!
               <Component />
             </div>);
   }

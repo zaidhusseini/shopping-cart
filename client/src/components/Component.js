@@ -3,7 +3,7 @@ import React from 'react';
 const Component = (props) => {
 
   return (<div>
-           My Second Component!
+            Second Component!
           </div>)
 
 }
