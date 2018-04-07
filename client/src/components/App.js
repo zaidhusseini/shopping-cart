@@ -1,6 +1,8 @@
 import React from 'react';
 import Checkout from './Checkout';
 import UserDetails from './UserDetails';
+import Address from './Address';
+import CreditCard from './Creditcard';
 
 class App extends React.Component {
   constructor(props){
@@ -15,10 +17,8 @@ class App extends React.Component {
   }
 
   changeView(view){
-          
-    if (view === 'checkout'){
-      this.setState({page: 'userDetails'});
-    }
+
+    this.setState({page: view});
   }
 
   render () {
@@ -26,8 +26,9 @@ class App extends React.Component {
     //conditionally render component
     const componentType = {
       checkout: <Checkout changeView={this.changeView.bind(this)}/>,
-      userDetails: <UserDetails />,
-      creditCard: function(){},
+      userDetails: <UserDetails changeView={this.changeView.bind(this)}/>,
+      address: <Address changeView={this.changeView.bind(this)}/>,
+      creditCard: <CreditCard />
     }
    
 

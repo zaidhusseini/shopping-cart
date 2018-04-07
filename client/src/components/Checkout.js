@@ -4,9 +4,9 @@ import { Button, Icon } from 'semantic-ui-react';
 const Checkout = (props) => {
 
   return (<div>
-            <Button animated='fade' onClick={()=>props.changeView('checkout')}>
-              <Button.Content primary hidden>Checkout</Button.Content>
-              <Button.Content primary visible>
+            <Button animated='fade' onClick={()=>props.changeView('userDetails')}>
+              <Button.Content primary="true" hidden>Checkout</Button.Content>
+              <Button.Content primary="true" visible>
                 <Icon name='shop' />
               </Button.Content>
             </Button>
