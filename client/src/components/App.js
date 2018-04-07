@@ -8,7 +8,27 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      page: 'checkout'
+      page: 'checkout',
+      userInfo: {
+        firstName:'',
+        lastName:'',
+        email:'',
+        password:''
+      },
+      address: {
+        line1:'',
+        line2:'',
+        city:'',
+        state:'',
+        zip:''
+      },
+      payment: {
+        creditCard:'',
+        expiry:'',
+        cvv:'',
+        zip:'',
+      }
+
     }
   }
 
