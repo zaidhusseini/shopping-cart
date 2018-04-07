@@ -1,21 +1,43 @@
 import React from 'react';
-import Component from './Component'
+import Checkout from './Checkout';
+import UserDetails from './UserDetails';
 
 class App extends React.Component {
   constructor(props){
     super(props);
-    this.state = {}
+    this.state = {
+      page: 'checkout'
+    }
   }
 
   componentWillMount(){
 
   }
 
+  changeView(view){
+          
+    if (view === 'checkout'){
+      this.setState({page: 'userDetails'});
+    }
+  }
+
   render () {
-    return (<div> 
-              <h1>MERN Starter Kit</h1>
-              This is your App!
-              <Component />
+
+    //conditionally render component
+    const componentType = {
+      checkout: <Checkout changeView={this.changeView.bind(this)}/>,
+      userDetails: <UserDetails />,
+      creditCard: function(){},
+    }
+   
+
+    return (<div className="checkout">
+              <div> 
+                <div className="title">
+                  <h1>Fartstacart Checkout App</h1>
+                </div>
+                {componentType[this.state.page]} 
+              </div> 
             </div>);
   }
 }
