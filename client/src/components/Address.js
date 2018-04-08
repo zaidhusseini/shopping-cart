@@ -13,7 +13,7 @@ const Address = (props) => {
           <Form.Input fluid label='State' placeholder='CA' width={3} />
           <Form.Input fluid label='Zip' placeholder='94123' width={4} />
         </Form.Group>
-        <Button primary="true" className="next" onClick={()=>props.changeView('creditCard')}>Next</Button>
+        <Button primary="true" className="next" onClick={()=>props.changeView(props.nextItem)}>Next</Button>
       </Form>
     </div>
   )

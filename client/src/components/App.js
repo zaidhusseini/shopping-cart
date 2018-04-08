@@ -3,6 +3,7 @@ import Checkout from './Checkout';
 import UserDetails from './UserDetails';
 import Address from './Address';
 import CreditCard from './Creditcard';
+import { Icon } from 'semantic-ui-react';
 
 class App extends React.Component {
   constructor(props){
@@ -32,7 +33,7 @@ class App extends React.Component {
     }
   }
 
-  componentWillMount(){
+  handleChange(){
 
   }
 
@@ -45,9 +46,9 @@ class App extends React.Component {
 
     //conditionally render component
     const componentType = {
-      checkout: <Checkout changeView={this.changeView.bind(this)}/>,
-      userDetails: <UserDetails changeView={this.changeView.bind(this)}/>,
-      address: <Address changeView={this.changeView.bind(this)}/>,
+      checkout: <Checkout changeView={this.changeView.bind(this)} nextItem={"userDetails"}/>,
+      userDetails: <UserDetails changeView={this.changeView.bind(this)} nextItem={"address"}/>,
+      address: <Address changeView={this.changeView.bind(this)} nextItem={"creditCard"}/>,
       creditCard: <CreditCard />
     }
    
@@ -55,6 +56,7 @@ class App extends React.Component {
     return (<div className="checkout">
               <div> 
                 <div className="title">
+                  <Icon name='thumbs up' size='big' className="logo"/>
                   <h1>Fartstacart Checkout App</h1>
                 </div>
                 {componentType[this.state.page]} 

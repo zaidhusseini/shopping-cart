@@ -9,7 +9,7 @@ const UserDetails = (props)=> {
               <Form.Input fluid label='Last Name' placeholder='e.g. Doe' />
               <Form.Input fluid label='E-mail' placeholder='John@Fartstacart.com' />
               <Form.Input fluid label='Enter Password' type='password' placeholder='Enter Password'/>
-              <Button primary="true" className="next" onClick={()=>props.changeView('address')}>Next</Button>
+              <Button primary="true" className="next" onClick={()=>props.changeView(props.nextItem)}>Next</Button>
             </Form>
           </div>)
 }

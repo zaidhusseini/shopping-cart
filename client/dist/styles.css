@@ -55,6 +55,12 @@ h1{
 }
 
 .forms{
-  margin-top: 30px;
+  margin-top: 70px;
+}
+
+.logo{
+  position: fixed;
+  top: 5%;
+  left: 10%;
 }
 
